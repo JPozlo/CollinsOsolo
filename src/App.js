@@ -4,6 +4,10 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 
 import Footer from './Components/Footer';
+import AboutPage from './Pages/AboutPage';
+import ContactPage from './Pages/ContactPage';
+import HomePage from './Pages/HomePage';
+import PortfolioPage from './Pages/PortfolioPage';
 
 class App extends React.Component{
 
@@ -40,17 +44,23 @@ class App extends React.Component{
 
           <Navbar className="border-bottom" bg="transparent" expand="lg">
             <Navbar.Brand>Collins Osolo</Navbar.Brand>
-            
+
             <Navbar.Toggle aria-controls="navbar-toggle" className="border-0" />
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
                 <Link className="nav-link" to="/">Home</Link>
-                <Link className="nav-link" to="#">About</Link>
-                <Link className="nav-link" to="#">Contact</Link>
-                <Link className="nav-link" to="#">Portfolio</Link>
+                <Link className="nav-link" to="/about">About</Link>
+                <Link className="nav-link" to="/contact">Contact</Link>
+                <Link className="nav-link" to="/portfolio">Portfolio</Link>
+
               </Nav>
             </Navbar.Collapse>
           </Navbar>
+
+          <Route path="/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text.title} />} />      
+          <Route path="/about" exact render={() => <AboutPage title={this.state.about.title} />} />      
+          <Route path="/contact" exact render={() => <ContactPage title={this.state.contact.title}  />} />      
+          <Route path="/portfolio" exact render={() => <PortfolioPage title={this.state.portfolio.title} />} />      
 
           <Footer /> 
 

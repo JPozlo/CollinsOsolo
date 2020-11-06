@@ -1,0 +1,13 @@
+import React, { Component } from 'react'
+
+export class ContactPage extends Component {
+    render() {
+        return (
+            <div>
+                <p>Contact</p>
+            </div>
+        )
+    }
+}
+
+export default ContactPage
