@@ -8,7 +8,9 @@ export class Footer extends Component {
                 <Container fluid={true}>
                     <Row className="border-top justify-content-between p-3">
                         <Col className="p-0" md={3} sm={12}>
-                             &copy;
+                            Copyright
+                            &copy;
+                            2020
                             Collins Osolo                
                         </Col>
                     </Row>
