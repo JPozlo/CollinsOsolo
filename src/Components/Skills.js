@@ -1,22 +1,14 @@
 import React from 'react'
-import { Container, Row } from 'react-bootstrap'
+import { Container, Row , Col, ProgressBar} from 'react-bootstrap'
 
-function Skills() {
-    return (
+function Skills(props) {
+     return (
         <Container fluid={true}>
-            <Row className="justify-content-center">
-        <ul className="list-group">
-                    <li>Kotlin: 85%</li>
-                    <li>Java: 80%</li>
-                    <li>Dart: 83%</li>
-                    <li>C#: 75%</li>
-                    <li>Javacript: 95%</li>
-                    <li>CSS: 95%</li>
-                    <li>HTML: 95%</li>
-                    <li>Python: 80%</li>
-                    <li>PHP: 70%</li>
-                </ul>
-            </Row>       
+               <Row className="justify-content-center">
+                <Col md={8}>
+                    {props.children}
+                </Col>
+            </Row>            
         </Container>
     )
 }

@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 
 import Card from './Card'
-import local from '../assets/images/batsy.jpg'
-import devgrub from '../assets/images/dave.jpg'
-import youtube from '../assets/images/dellinspiron.jpg'
+import commands from '../assets/images/commands.png'
+import spiq from '../assets/images/spiq.PNG'
 import { Container , Row } from 'react-bootstrap'
 
 export class Carousel extends Component {
@@ -11,33 +10,26 @@ export class Carousel extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            items: [
-                {
-                    id: 0,
-                    title: 'First Project',
-                    subTitle: 'The project details',
-                    imgSrc: local,
-                    link: '/',
-                    selected: false
-                },
-                {
-                    id: 1,
-                    title: 'Second Project',
-                    subTitle: 'The project details',
-                    imgSrc: devgrub,
-                    link: 'https://devgrub.com',
-                    selected: false
-                },
-                {
-                    id: 2,
-                    title: 'Third Project',
-                    subTitle: 'The project details',
-                    imgSrc: youtube,
-                    link: 'https://devgrub.com',
-                    selected: false
-                },
-            ]
-        }
+          items: [
+            {
+              id: 0,
+              title: "Commands Website",
+              subTitle: "A website for saving the common CLI commands one uses for easy reference later.",
+              imgSrc: commands,
+              link: "http://51.132.187.202/",
+              selected: false,
+            },
+            {
+              id: 1,
+              title: "Spiq Android App",
+              subTitle: "An android app that gives its users access to the various Spiq services.",
+              imgSrc: spiq,
+              link:
+                "https://play.google.com/store/apps/details?id=com.missolova.spiq&hl=en_US&gl=US",
+              selected: false,
+            },
+          ],
+        };
     }
 
     handleCardClick = (id, card) => {
@@ -64,12 +56,12 @@ export class Carousel extends Component {
 
     render() {
         return (
-            <Container fluid={true}>
-                <Row className="justify-content-around">
-                    {this.makeItems(this.state.items)}
-                </Row>
-            </Container>
-        )
+          <Container fluid={true}>
+            <Row className="justify-content-around">
+              {this.makeItems(this.state.items)}
+            </Row>
+          </Container>
+        );
     }
 }
 

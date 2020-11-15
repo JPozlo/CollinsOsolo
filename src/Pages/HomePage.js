@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
+import { Jumbotron } from 'react-bootstrap';
 import Hero from '../Components/Hero';
-import MyCarousel from '../Components/Carousel';
+
+import AboutPage from './AboutPage';
 
 export class HomePage extends Component {
 
@@ -11,13 +13,14 @@ export class HomePage extends Component {
 
     render() {
         return (
-            <div>
-                <Hero title={this.props.title} subTitle={this.props.subTitle} text={this.props.text.title} />
-
-                <MyCarousel />
-            </div>
-            
-        )
+          <div>
+              <Hero
+                title={this.props.title}
+                subTitle={this.props.subTitle}
+                text={this.props.text.title}
+              />
+          </div>
+        );
     }
 }
 

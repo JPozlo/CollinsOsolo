@@ -12,13 +12,18 @@ code {
     monospace;
 }
 
+.jumbo-header{
+  /* background-color: rgb(122, 79, 106); */
+  background-color: #ADD8E6;
+}
+
 .osolo-card{
   margin: 10px;
 }
 
 .osolo-card-image{
   border-radius: 10px;
-  width: 300px;
+  width: 550px;
   height: 480px;
   box-shadow: 0px 0px 3px 1px #ccc;
 }
@@ -36,4 +41,14 @@ code {
 .osolo-card-subtitle{
   font-size: 16px;
   margin: 0px;
+}
+
+.success-msg{
+  color: rgb(80, 250, 70);
+  padding: 10px 15px;
+}
+
+.err-msg{
+  color: rgb(250, 50, 0);
+  padding: 10px 15px;
 }
